@@ -13,7 +13,12 @@ cc.Class {
         @_upTime = 0
         @_time = 0
         @_normal = sType.normal
-        @node.on(cc.Node.EventType.TOUCH_END,@touchEnd.bind(this))
+#        @node.on(cc.Node.EventType.MOUSE_DOWN,@touchEnd.bind(this))
+
+        listener =
+            event: cc.EventListener.MOUSE
+            onMouseDown:@touchEnd.bind(this)
+        cc.eventManager.addListener(listener,this.node)
     touchEnd:(event)->
         @speed +=  1
         @_time += 0.5
