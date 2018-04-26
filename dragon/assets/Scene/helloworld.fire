@@ -412,7 +412,8 @@
     "node": {
       "__id__": 8
     },
-    "_enabled": true
+    "_enabled": true,
+    "speed": 0.8
   },
   {
     "__type__": "78f7flAWHVBMZWiReHUv5ks",

@@ -21,14 +21,14 @@ cc.Class {
         cc.eventManager.addListener(listener,this.node)
     touchEnd:(event)->
         @speed +=  1
-        @_time += 0.5
+        @_time += 0.8
         @_normal = sType.up
 
     speedUp:(dt)->
         @_upTime += dt
         if(@_upTime >= @_time)
             @_upTime = 0
-            @_time = (@speed - 1) * 0.5
+            @_time = (@speed - 1) * 0.8
             @_normal = sType.down
 
     speedDown:(dt)->

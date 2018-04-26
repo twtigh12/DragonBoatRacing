@@ -3,7 +3,7 @@ cc.Class {
     extends: cc.Component
 
     properties: {
-        speed:0.5
+        speed:0.8
     }
 
     onLoad:->
@@ -15,15 +15,15 @@ cc.Class {
             onMouseDown:@touchEnd.bind(this)
         cc.eventManager.addListener(listener,this.node)
     touchEnd:(event)->
-        @speed +=  -1
-        @_time += 0.5
+        @speed +=  -0.8
+        @_time += 0.8
         @_normal = sType.up
 
     speedUp:(dt)->
         @_upTime += dt
         if(@_upTime >= @_time)
             @_upTime = 0
-            @_time = (@speed - 1) * 0.5
+            @_time = (@speed - 1) * 0.8
             @_normal = sType.down
 
     speedDown:(dt)->
@@ -31,7 +31,7 @@ cc.Class {
         @speed += dt
         if(@speed >= 0.5)
             @_normal = sType.normal
-            @speed = 0.5
+            @speed = 0.8
             @_upTime = 0
             @_time = 0
 
