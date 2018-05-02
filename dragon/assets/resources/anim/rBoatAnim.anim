@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "rBoatAnim",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "589e9876-e69d-4ab7-9797-8829211e12d4"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "900dcc63-8eda-49e9-b5a3-4bfc52fe7368"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f95fb555-7c48-4340-8dd6-91248ac17ab7",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Pavilion": {
+      "ver": "1.0.3",
+      "uuid": "8414748f-bd16-4e27-904f-24eb26d7d48b",
+      "rawTextureUuid": "f95fb555-7c48-4340-8dd6-91248ac17ab7",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 205,
+      "height": 209,
+      "rawWidth": 205,
+      "rawHeight": 209,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
