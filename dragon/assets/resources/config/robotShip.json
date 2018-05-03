@@ -9,7 +9,7 @@
   },
   {
     "lv":2,
-    "Speed":1,
+    "Speed":2,
     "Continuedtime":3,
     "speedup":3,
     "interval":6,
@@ -17,25 +17,25 @@
   },
   {
     "lv":3,
-    "Speed":1,
+    "Speed":3,
     "Continuedtime":5,
-    "speedup":6,
+    "speedup":4,
     "interval":15,
     "chance":20
   },
   {
     "lv":4,
-    "Speed":1,
+    "Speed":4,
     "Continuedtime":6,
-    "speedup":7,
+    "speedup":2,
     "interval":20,
     "chance":15
   },
   {
     "lv":5,
-    "Speed":1,
+    "Speed":5,
     "Continuedtime":8,
-    "speedup":8,
+    "speedup":2,
     "interval":25,
     "chance":10
   }

@@ -12,11 +12,7 @@ cc.Class {
         @_time = 0
         @_speedType = sType.normal
         @_state = sType.normal
-#        listener =
-#            event: cc.EventListener.MOUSE
-#            onMouseDown:@touchEnd.bind(this)
-#        _canvas = cc.find("Canvas")
-#        _canvas.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
+
     setShipSpeed:()->
         @speed +=  -0.8
         @_time += 0.8
