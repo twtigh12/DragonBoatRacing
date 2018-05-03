@@ -2,41 +2,41 @@
   {
     "lv":1,
     "Speed":1,
-    "Continuedtime":2,
-    "speedup":2,
-    "interval":3,
+    "Continuedtime":3,
+    "speedup":3,
+    "interval":2,
     "chance":50
   },
   {
     "lv":2,
     "Speed":2,
-    "Continuedtime":3,
-    "speedup":3,
-    "interval":6,
+    "Continuedtime":5,
+    "speedup":4,
+    "interval":4,
     "chance":30
   },
   {
     "lv":3,
     "Speed":3,
-    "Continuedtime":5,
-    "speedup":4,
-    "interval":15,
+    "Continuedtime":7,
+    "speedup":6,
+    "interval":6,
     "chance":20
   },
   {
     "lv":4,
     "Speed":4,
-    "Continuedtime":6,
-    "speedup":2,
-    "interval":20,
+    "Continuedtime":9,
+    "speedup":6,
+    "interval":8,
     "chance":15
   },
   {
     "lv":5,
     "Speed":5,
     "Continuedtime":8,
-    "speedup":2,
-    "interval":25,
+    "speedup":7,
+    "interval":10,
     "chance":10
   }
 ]

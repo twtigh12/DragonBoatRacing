@@ -1,5 +1,6 @@
 sType = require "dragon/assets/script/ship/shipType"
 DataModel = require "DataModel"
+Tools = require "Tools"
 cc.Class {
     extends: cc.Component
 
@@ -11,14 +12,19 @@ cc.Class {
     onLoad:->
         @_time = 0
         @_upTime = 0
+        @_interval = 0
         @_speedType = sType.normal
+        @randConfig()
+
+    randConfig:->
+        _rand = (Tools.rand(0,100) % 4)
         promise = DataModel.getModel().loadrobotConfig()
         promise = promise.then (_config)=>
-            @speed = _config[0].Speed
-            @setShipSpeed _config[0]
+            @speed = _config[_rand].Speed
+            @setShipSpeed _config[_rand]
+            @_interval = _config[_rand].interval
 
     setShipSpeed:(config)->
-        cc.log()
         @speed += -config.speedup
         @_time += config.Continuedtime
         @_speedType = sType.up
@@ -56,5 +62,5 @@ cc.Class {
         @speedUp(dt) if @_speedType is sType.up
         @speedDown(dt) if @_speedType is sType.down
 
-        # do your update here
+# do your update here
 }
