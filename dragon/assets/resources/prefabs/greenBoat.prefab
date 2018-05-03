@@ -100,7 +100,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "speed": 0.8,
+    "speed": 1.5,
     "type": 101
   },
   {
@@ -127,7 +127,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "277f2590-fa50-4c3a-a177-631918239d7d"
     },
     "fileId": "f8z8mRHv5MIY4Wh6/4t0EU",
     "sync": false

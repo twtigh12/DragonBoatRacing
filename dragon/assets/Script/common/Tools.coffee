@@ -34,27 +34,6 @@ Tools = {
       lable.string = fromNum
     ,20
 
-  getEnIndex:(index)->
-    switch index
-      when 0 then "Zero"
-      when 1 then "First"
-      when 2 then "Second"
-      when 3 then "Third"
-      when 4 then "Fourth"
-      when 5 then "Fifth"
-      when 6 then "Sixth"
-      when 7 then "Seventh"
-      when 8 then "Eighth"
-      when 9 then "Ninth"
-      when 10 then "Tenth"
-      when 11 then "Eleventh"
-      when 12 then "Twelfth"
-      when 13 then "Thirteenth"
-      when 14 then "Fourteenth"
-      when 15 then "Fifteenth"
-      when 16 then "Sixteenth"
-
-
   translate : () ->
     args = arguments
     args[0].replace /{(\d+)}/g, (match, number) ->
@@ -84,7 +63,6 @@ Tools = {
             frame = atlas.getSpriteFrame(sprStr)
             Tools._spritrFrames.push({frame:frame,name:sprStr})
             resolve frame
-
     return promise
 
   loadUI:(prefabUrl,data) ->
@@ -120,26 +98,6 @@ Tools = {
           return  cc.log "json解析出错 ：#{jsonUrl}"
         resolve res
 
-  getlvName:(lv)->
-    switch lv
-      when 0 then "kindergarten"
-      when 1 then "Grade 1"
-      when 2 then "Grade 2"
-      when 3 then "Grade 3"
-      when 4 then "Grade 4"
-      when 5 then "Grade 5"
-      when 6 then "Grade 6"
-      when 7 then "JGrade 7"
-      when 8 then "Grade 8"
-      when 9 then "Grade 9"
-      when 10 then "Grade 10"
-      when 11 then "Grade 11"
-      when 12 then "Grade 12"
-      when 13 then "Grade 13"
-      when 14 then "Grade 14"
-      when 15 then "Grade 15"
-      when 16 then "Grade 16"
-
   cutString:(str, len)->
       reg = /[\u4e00-\u9fa5]/g #/[\u4e00-\u9fa5]/g;    #专业匹配中文  "^.+?[^\u4e00-\u9fa5A-Za-z]+.+?$"
       slice = str.substring(0, len);
@@ -152,20 +110,6 @@ Tools = {
     n = n ? 0
     parseInt(Math.random()*(m-n+1)+n,10);
     return Math.floor(Math.random()*(m-n+1)+n);
-
-  setRankLbl:(lbl)->
-    _data = DataModel.getModel()
-    promise = _data.getRandRank()
-    if !promise
-      if lbl then lbl.string = _data.getRank()
-    else
-      promise.then (rank)=>
-        if lbl then lbl.string = rank ? 9999
-
-  getPropImgByID:(propID)->
-    str = "icon_" + propID
-    promise = @loadImage("sheep/Item/Item.plist",str)
-    return promise
 
 
 }

@@ -1,5 +1,5 @@
 var LANG_TEXT = {};
-var isCN = true;
+LANG_TEXT.appName = "赛龙舟"
 LANG_TEXT.NetWork_Hint = "网络错误({0})，请求数据失败"; // "Network error{0},request data failed";
 LANG_TEXT.NetWork_Hint1 = "连接服务器超时,请重新登录。"; // "Connection to server timed out,Please login again.";
 LANG_TEXT.NetWork_Hint2 = "账号无效"; // "Invalid account";

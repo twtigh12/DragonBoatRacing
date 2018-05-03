@@ -1,10 +1,10 @@
-sType = require "shipType"
+sType = require "dragon/assets/script/ship/shipType"
 cc.Class {
     extends: cc.Component
 
     properties: {
         speed:0.8
-        type:sType.Robot
+        type:sType.mySelf
     }
 
     onLoad:->
@@ -34,7 +34,6 @@ cc.Class {
     speedDown:(dt)->
         @_upTime += dt
         @speed += dt
-        cc.log("speedDown")
         if(@speed >= 0.5)
             @_speedType = sType.normal
             @speed = 0.8
@@ -50,9 +49,8 @@ cc.Class {
 
     update: (dt) ->
         @node.y -= @speed
-        if @type is sType.mySelf
-            @_state = if @node.y >= 0 then sType.stop else sType.normal
-            @speed = 0 if @node.y >= 0
+        @_state = if @node.y >= 0 then sType.stop else sType.normal
+        @speed = 0 if @node.y >= 0
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
             @speedDown(dt) if @_speedType is sType.down

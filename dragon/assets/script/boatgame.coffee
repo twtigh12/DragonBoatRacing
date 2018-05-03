@@ -1,4 +1,4 @@
-sType = require "shipType"
+sType = require "ship/shipType"
 DataModel = require "DataModel"
 cc.Class {
     extends: cc.Component
@@ -7,7 +7,7 @@ cc.Class {
         bg2:cc.Sprite
         startSpr:cc.Sprite
         ship:cc.Node
-        speed:1
+        speed:0.8
     }
 
     onLoad:->
@@ -20,7 +20,7 @@ cc.Class {
         _canvas = cc.find("Canvas")
         _canvas.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
     touchEnd:(event)->
-        @speed +=  1
+        @speed +=  0.8
         @_time += 0.8
         @_normal = sType.up
         @_ship.setShipSpeed()

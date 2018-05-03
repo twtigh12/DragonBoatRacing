@@ -1,5 +1,6 @@
 var LANG_TEXT = {};
-var isCN = true;
+
+LANG_TEXT.appName = "Dragon Boat";
 LANG_TEXT.NetWork_Hint = "Network error{0},request data failed";
 LANG_TEXT.NetWork_Hint1 = "Connection to server timed out,Please login again.";
 LANG_TEXT.NetWork_Hint2 = "Invalid account";

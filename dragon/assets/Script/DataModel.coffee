@@ -1,3 +1,5 @@
+Tools = require("Tools");
+
 DataModel  = cc.Class
   initData:->
     cc.log("initData")
@@ -11,6 +13,17 @@ DataModel  = cc.Class
   setGameMode:(@_mode)->
   getGameMode:->
     return @_mode
+
+  loadrobotConfig:->
+    promise = Promise.resolve()
+    if(@_robotConfig)
+      promise = promise.then ()=>
+        return @_robotConfig
+    else
+      promise = Tools.jsonParse("resources/config/robotShip.json")
+      promise = promise.then (configs)=>
+        @_robotConfig = configs
+        cc.log("robotConfig:" + JSON.stringify(configs))
 
   _ship:null
 

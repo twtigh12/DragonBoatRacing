@@ -1,7 +1,7 @@
 kVertexZ =
   UISpace   : 400
-DataModel = require "DataModel"
-Tools = require "Tools"
+DataModel = require "dragon/assets/script/DataModel"
+Tools = require "common/Tools"
 
 window.TitleType = {
   Default:-1  #默认

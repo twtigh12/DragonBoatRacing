@@ -1,8 +1,8 @@
-var GamePlatform = require("GamePlatform");
-var NetLoading = require("NetLoading");
-var Dialog = require("Dialog");
-var DialogType = require("DialogType");
-window.LANG_TEXT = require("LANGTEXT_EN");
+var GamePlatform = require("netWork/GamePlatform");
+var NetLoading = require("dragon/assets/script/common/NetLoading");
+var Dialog = require("dragon/assets/script/common/Dialog");
+var DialogType = require("dragon/assets/script/common/DialogType");
+window.LANG_TEXT = require("dragon/assets/script/common/LANGTEXT_EN");
 
 var UserDataInterFace = {
     autoFlush: true

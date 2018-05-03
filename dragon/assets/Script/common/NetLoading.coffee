@@ -1,4 +1,4 @@
-UIControl = require "UIControl"
+UIControl = require "common/UIControl"
 
 NetLoading = cc.Class
     extends: cc.Component

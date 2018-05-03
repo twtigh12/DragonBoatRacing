@@ -1,4 +1,6 @@
+
 UIControl = require "UIControl"
+DataModel = require "DataModel"
 cc.Class {
     extends: cc.Component
 
@@ -7,7 +9,8 @@ cc.Class {
     }
 
     onLoad:->
-       window.lodash = require "lodash"
+        window.lodash = require "lodash"
+        DataModel.getModel().loadrobotConfig()
 
     onClickExplain:()->
 
@@ -24,5 +27,5 @@ cc.Class {
     onClickAnswer:()->
 
     update: (dt) ->
-        # do your update here
+# do your update here
 }
