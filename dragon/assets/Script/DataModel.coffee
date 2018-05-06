@@ -13,6 +13,11 @@ DataModel  = cc.Class
   setGameMode:(@_mode)->
   getGameMode:->
     return @_mode
+  
+  setShipSpeed:(@_shipSpeed)->
+
+  getShipSpeed:->
+    return @_shipSpeed ? 0
 
   loadrobotConfig:->
     promise = Promise.resolve()

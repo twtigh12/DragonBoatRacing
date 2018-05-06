@@ -7,7 +7,7 @@ cc.Class {
         bg2:cc.Sprite
         startSpr:cc.Sprite
         ship:cc.Node
-        speed:0.8
+        speed:6
     }
 
     onLoad:->
@@ -16,31 +16,18 @@ cc.Class {
         @_normal = sType.normal
         @_ship = @ship.getComponent("ship")
         @_ship.setType(sType.mySelf)
-#        @node.on(cc.Node.EventType.MOUSE_DOWN,@touchEnd.bind(this))
+
         _canvas = cc.find("Canvas")
         _canvas.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
     touchEnd:(event)->
-        @speed +=  0.8
-        @_time += 0.8
-        @_normal = sType.up
-        @_ship.setShipSpeed()
-        if(@_ship.getState() is sType.stop)
-          @_time = @_ship.getuptime()
-
-    speedUp:(dt)->
-        @_upTime += dt
-        if(@_upTime >= @_time)
-            @_upTime = 0
-            @_time = (@speed - 1) * 0.8
-            @_normal = sType.down
-
-    speedDown:(dt)->
-        @speed -= dt
-        if(@speed <= 1)
-            @_normal = sType.normal
-            @speed = 1
-            @_upTime = 0
-            @_time = 0
+        @_ship.move()
+        if(@_ship.node.y > 0)
+            height = @_ship.node.y
+            @_ship.node.y = height * 0.5
+            @_shipType = @_ship.getState()
+            @speed -= @_ship.getShipSpeed()
+            if(@speed > 40)
+                @speed = 40
 
     update: (dt) ->
         @bg1.node.y -= @speed
@@ -49,8 +36,5 @@ cc.Class {
             @bg1.node.y = @bg2.node.y +  @bg2.node.height
         if(@bg2.node.y < -568)
             @bg2.node.y = @bg1.node.y +  @bg1.node.height
-        if( @_normal isnt sType.normal)
-            @speedUp(dt) if @_normal is sType.up
-            @speedDown(dt) if @_normal is sType.down
         # do your update here
 }

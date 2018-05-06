@@ -124,7 +124,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 772
+      "y": 760
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -215,7 +215,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 2106
+      "y": 2088
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -750,7 +750,7 @@
     "ship": {
       "__id__": 16
     },
-    "speed": 1
+    "speed": 6
   },
   {
     "__type__": "cc.PrefabInfo",

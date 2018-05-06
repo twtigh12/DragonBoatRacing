@@ -3,50 +3,52 @@ cc.Class {
     extends: cc.Component
 
     properties: {
-        speed:0.8
+        speed:2
         type:sType.mySelf
     }
 
     onLoad:->
         @_upTime = 0
         @_time = 0
+        @_speed = 0
         @_speedType = sType.normal
         @_state = sType.normal
+        @_height = @node.height
 
-    setShipSpeed:()->
-        @speed +=  -0.8
-        @_time += 0.8
+    move:()->
         @_speedType = sType.up
+        @_height = @node.height
 
     setType:(@type)->
 
     speedUp:(dt)->
-        @_upTime += dt
-        if(@_upTime >= @_time)
-            @_upTime = 0
-            @_time = (@speed - 1) * 0.8
+        @_speed = -(@node.height * 0.01)
+        @_height += @_speed
+        if (@_height <= 5)
+            @_height =  @node.height
             @_speedType = sType.down
+            @_speed = 0
 
     speedDown:(dt)->
-        @_upTime += dt
-        @speed += dt
-        if(@speed >= 0.5)
+        @_speed = (@node.height * 0.01)
+        @_height -= @_speed
+        if (@_height <= -5)
+            @_height = 0
             @_speedType = sType.normal
-            @speed = 0.8
-            @_upTime = 0
-            @_time = 0
+            @_speed = 0
+
+    getShipSpeed:->
+        return @_speed
 
     getState:->
-        return @_state
+        return @_speedType
     getSpeed:->
         return @speed
     getuptime:->
         return @_upTime
 
     update: (dt) ->
-        @node.y -= @speed
-        @_state = if @node.y >= 0 then sType.stop else sType.normal
-        @speed = 0 if @node.y >= 0
+        @node.y -= @_speed  if (@node.y < 0 and @_speedType is sType.up) or @_speedType is sType.down
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
             @speedDown(dt) if @_speedType is sType.down
