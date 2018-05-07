@@ -42,7 +42,10 @@ cc.Class {
         @_index++
 
     setStartSpr:->
-        if( @starSpr.node.y > -cc.winSize.height * 0.5 - @starSpr.node.height )
+        maxy = -cc.winSize.height * 0.5 - @starSpr.node.height
+        cc.log("@starSpr.node.y:" + @starSpr.node.y + " maxy:" + maxy + " @_isend:" + @_isend )
+        cc.log(" @starSpr.node.y >  maxy :" +  @starSpr.node.y >  maxy)
+        if( @starSpr.node.y >  maxy or @_isend)
             @starSpr.node.y -= @speed
 
     setBgPos:->
@@ -56,12 +59,13 @@ cc.Class {
 
     setStretch:->
         @_temp += Math.abs(@_ship.getShipSpeed())
-        _scale =  @map.height / 6000
-        _temp = @_temp / 6000
+        _scale =  @map.height / 2000
+        _temp = @_temp / 2000
         y = @_temp * _scale
         @mapship.node.y = y
-        if(y >= @map.height - 100)
-            @starSpr.node.y = cc.winSize.height + 100
+        if(y >= @map.height - 100 and !@_isend)
+            @starSpr.node.y = cc.winSize.height * 0.5 - @starSpr.node.height
+            @_isend = true
 
     update: (dt) ->
         if(DataModel.getModel().getShipState() isnt sType.stop and @_isStart)

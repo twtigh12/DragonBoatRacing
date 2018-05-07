@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1fd80a7-5a7c-4e34-a871-44f7e6376028" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="boatgame.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+            <state relative-caret-position="152">
+              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -144,13 +143,13 @@
       <find>node.y</find>
       <find>cc.loader.loadres</find>
       <find>@_speedType</find>
-      <find>@speed</find>
       <find>@_upTime</find>
       <find>@_time</find>
       <find>@_index</find>
       <find>@_temp</find>
       <find>@_normal</find>
       <find>@_isStart</find>
+      <find>@speed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -330,12 +329,12 @@
       <workItem from="1525449904079" duration="2335000" />
       <workItem from="1525576005645" duration="31989000" />
       <workItem from="1525659374293" duration="928000" />
-      <workItem from="1525704162519" duration="9758000" />
+      <workItem from="1525704162519" duration="10631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70077000" />
+    <option name="totallyTimeSpent" value="70950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -622,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+        <state relative-caret-position="152">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
         </state>
       </provider>
     </entry>
