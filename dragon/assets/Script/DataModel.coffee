@@ -16,6 +16,10 @@ DataModel  = cc.Class
   
   setShipSpeed:(@_shipSpeed)->
 
+  setShipState:(@_shipType)->
+  getShipState:->
+    return @_shipType
+
   getShipSpeed:->
     return @_shipSpeed ? 0
 

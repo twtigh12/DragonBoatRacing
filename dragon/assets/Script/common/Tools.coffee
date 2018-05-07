@@ -65,6 +65,12 @@ Tools = {
             resolve frame
     return promise
 
+  loadFrame:(file,sprite)->
+    cc.loader.loadRes file, cc.SpriteFrame, (err, spriteFrame) =>
+      if err?
+        return
+      sprite.spriteFrame = spriteFrame if sprite and spriteFrame
+
   loadUI:(prefabUrl,data) ->
     promise = Tools.loadPrefabs prefabUrl
     promise = promise.then (loadedResource)=>
