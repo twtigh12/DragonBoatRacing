@@ -12,24 +12,22 @@ cc.Class {
         starSpr:cc.Sprite
         mapship:cc.Sprite
         map:cc.Node
-        speed:6
+        speed:0
     }
 
     onLoad:->
-        @_upTime = 0
-        @_time = 0
         @_index = 0
         @_temp = 0
-        @_normal = sType.normal
         @_ship = @ship.getComponent("ship")
         @_ship.setType(sType.mySelf)
-        @_isStart = true
+        @_isStart = false
         @_shipspeed = @_ship.node.height * 0.005
 #        _canvas = cc.find("Canvas")
 #        _canvas.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
 
     touchEnd:(event)->
         @_ship.move()
+        @_isStart = true
         height = @_ship.node.height
         if(@_ship.node.y >= height * 0.5)
             @_ship.node.y = height * 0.5
@@ -48,6 +46,7 @@ cc.Class {
             @starSpr.node.y -= @speed
 
     setBgPos:->
+        cc.log("@speed:" + @speed)
         @bg1.node.y -= @speed
         @bg2.node.y -= @speed
         if(@bg1.node.y < -568)
@@ -65,9 +64,9 @@ cc.Class {
             @starSpr.node.y = cc.winSize.height + 100
 
     update: (dt) ->
-        if(DataModel.getModel().getShipState() isnt sType.stop)
-            @speed -= @_shipspeed * 0.2
-            @speed = 6 if(@speed < 6)
+        if(DataModel.getModel().getShipState() isnt sType.stop and @_isStart)
+            @speed += Math.abs(@_shipspeed * 0.2)
+            @speed = 6 if(@speed > 6)
 
         @setStartSpr()
         @setBgPos()

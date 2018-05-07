@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1fd80a7-5a7c-4e34-a871-44f7e6376028" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/Script/DataModel.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/DataModel.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/Script/common/Tools.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/common/Tools.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/Script/ship/ship.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/ship/ship.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/Script/ship/shiprobot.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/ship/shiprobot.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/game/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/game/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/game/bg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/game/bg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/game/drum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/game/drum.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/scene/gamePanel.fire" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/scene/gamePanel.fire" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +30,8 @@
       <file leaf-file-name="boatgame.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+            <state relative-caret-position="143">
+              <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -130,13 +121,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find>DataModel</find>
-      <find>jsonparse</find>
       <find>lodash</find>
       <find>AppName</find>
       <find>speedUp</find>
-      <find>@_upTime</find>
       <find>schedule</find>
       <find>cc.log(</find>
       <find>@_uptime</find>
@@ -147,9 +134,7 @@
       <find>cc.log</find>
       <find>getShipSpeed</find>
       <find>setShipSpeed</find>
-      <find>@_time</find>
       <find>stop</find>
-      <find>@speed</find>
       <find>@_shipspeed</find>
       <find>@_speed</find>
       <find>speed</find>
@@ -158,8 +143,14 @@
       <find>@_shipSpeed</find>
       <find>node.y</find>
       <find>cc.loader.loadres</find>
-      <find>@_temp</find>
       <find>@_speedType</find>
+      <find>@speed</find>
+      <find>@_upTime</find>
+      <find>@_time</find>
+      <find>@_index</find>
+      <find>@_temp</find>
+      <find>@_normal</find>
+      <find>@_isStart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,7 +193,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="206" />
     <option name="y" value="126" />
     <option name="width" value="1026" />
@@ -339,12 +330,12 @@
       <workItem from="1525449904079" duration="2335000" />
       <workItem from="1525576005645" duration="31989000" />
       <workItem from="1525659374293" duration="928000" />
-      <workItem from="1525704162519" duration="9243000" />
+      <workItem from="1525704162519" duration="9758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69562000" />
+    <option name="totallyTimeSpent" value="70077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -631,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+        <state relative-caret-position="143">
+          <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
         </state>
       </provider>
     </entry>

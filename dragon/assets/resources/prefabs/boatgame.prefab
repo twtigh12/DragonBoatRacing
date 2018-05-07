@@ -3563,7 +3563,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "900dcc63-8eda-49e9-b5a3-4bfc52fe7368"
+      "__uuid__": "589e9876-e69d-4ab7-9797-8829211e12d4"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -3611,9 +3611,7 @@
   },
   {
     "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
+    "root": null,
     "asset": {
       "__uuid__": "2f3fd9ff-88fb-4335-8632-26077937c11b"
     },
@@ -4452,7 +4450,7 @@
     "map": {
       "__id__": 136
     },
-    "speed": 2
+    "speed": 0
   },
   {
     "__type__": "cc.PrefabInfo",
