@@ -64,7 +64,7 @@ cc.Class {
             _shipSpeed = DataModel.getModel().getShipSpeed()
             _temp =  Math.abs(Math.abs(@_shipSpeed) - Math.abs(_shipSpeed))
 
-        @_shipSpeed += if @_speedType is sType.up then -_temp else _temp
+        @_shipSpeed += if @_speedType is sType.up then _temp else -_temp
 
         @node.y -= @_shipSpeed if @_speedType is sType.up or @_speedType is sType.down
         if( @_speedType isnt sType.normal)
