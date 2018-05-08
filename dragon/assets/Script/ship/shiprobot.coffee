@@ -29,7 +29,6 @@ cc.Class {
             @move()
 
     move:()->
-        cc.log("move")
         @_speedType = sType.up
         @_height = @node.height
 

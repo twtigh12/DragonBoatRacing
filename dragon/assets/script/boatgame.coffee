@@ -43,13 +43,10 @@ cc.Class {
 
     setStartSpr:->
         maxy = -cc.winSize.height * 0.5 - @starSpr.node.height
-        cc.log("@starSpr.node.y:" + @starSpr.node.y + " maxy:" + maxy + " @_isend:" + @_isend )
-        cc.log(" @starSpr.node.y >  maxy :" +  @starSpr.node.y >  maxy)
         if( @starSpr.node.y >  maxy or @_isend)
             @starSpr.node.y -= @speed
 
     setBgPos:->
-        cc.log("@speed:" + @speed)
         @bg1.node.y -= @speed
         @bg2.node.y -= @speed
         if(@bg1.node.y < -568)
