@@ -1,32 +1,49 @@
 sType = require "ship/shipType"
 DataModel = require "DataModel"
 Tools = require "Tools"
+UIControl = require "UIControl"
 cc.Class {
     extends: cc.Component
     properties: {
         bg1:cc.Sprite
         bg2:cc.Sprite
-        startSpr:cc.Sprite
         drum:cc.Sprite
         ship:cc.Node
+        shiprobot1:cc.Node
+        shiprobot2:cc.Node
         starSpr:cc.Sprite
-        mapship:cc.Sprite
+        mapship:cc.Node
         map:cc.Node
-        speed:0
+        timeLbl:cc.Label
+        speedBtn:cc.Button
     }
 
     onLoad:->
-        @_index = 0
-        @_temp = 0
         @_ship = @ship.getComponent("ship")
+        @_robotship1 = @shiprobot1.getComponent("shiprobot")
+        @_robotship2 = @shiprobot2.getComponent("shiprobot")
+        @_shipNormaly = @ship.y
+        @_startSpry = @starSpr.node.y
         @_ship.setType(sType.mySelf)
-        @_isStart = false
-        @_shipspeed = @_ship.node.height * 0.005
-#        _canvas = cc.find("Canvas")
-#        _canvas.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
+        @updateData()
+
+    showCountTime:->
+        @timeLbl.string = @_timeIndex
+        if(@_timeIndex is 0)
+            @timeLbl.string  = "GO!"
+            cb = =>
+                @_robotship1.move()
+                @_robotship2.move()
+                @speedBtn.interactable = true
+            @timeLbl.node.runAction(cc.sequence(cc.delayTime(0.5),cc.callFunc(cb,this),cc.fadeOut(0.3)))
+            return
+        @_timeIndex--
+        @timeLbl.node.runAction(cc.sequence(cc.delayTime(1),cc.callFunc(@showCountTime,this)))
+
 
     touchEnd:(event)->
         @_ship.move()
+
         @_isStart = true
         height = @_ship.node.height
         if(@_ship.node.y >= height * 0.5)
@@ -55,16 +72,44 @@ cc.Class {
             @bg2.node.y = @bg1.node.y +  @bg1.node.height - 64
 
     setStretch:->
+        if (@_isOver) then return
         @_temp += Math.abs(@_ship.getShipSpeed())
         _scale =  @map.height / 2000
         _temp = @_temp / 2000
         y = @_temp * _scale
-        @mapship.node.y = y
+        @mapship.y = y
         if(y >= @map.height - 100 and !@_isend)
             @starSpr.node.y = cc.winSize.height * 0.5 - @starSpr.node.height
             @_isend = true
 
+        if(y >= (@map.height - @mapship.height - 10) and !@_isOver)
+            @mapship.y = (@map.height - @mapship.height - 10)
+            @_isOver = true
+            @showGameOver()
+
+    showGameOver:->
+        UIControl.getInstance().showPrefab("overPanel","over")
+
+    updateData:->
+        @mapship.y = 0
+        @_isOver = false
+        @_ship.setNormal()
+        @_robotship1.setNormal()
+        @_robotship2.setNormal()
+        @starSpr.node.y = @_startSpry
+        @_isend = false
+        @_index = 0
+        @_temp = 0
+        @speed = 0
+        @_shipspeed = @_ship.node.height * 0.005
+        @_isStart = false
+        @_timeIndex = 3
+        @speedBtn.interactable = false
+        @timeLbl.node.runAction(cc.fadeIn(0.3))
+        @showCountTime()
+
     update: (dt) ->
+        if(@_isOver) then return
         if(DataModel.getModel().getShipState() isnt sType.stop and @_isStart)
             @speed += Math.abs(@_shipspeed * 0.2)
             @speed = 6 if(@speed > 6)

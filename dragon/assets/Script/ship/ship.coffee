@@ -4,19 +4,24 @@ cc.Class {
     extends: cc.Component
 
     properties: {
-        speed:2
         type:sType.mySelf
     }
 
     onLoad:->
-        @_upTime = 0
-        @_time = 0
+        @_normaly = @node.y
+        @setNormal()
+
+    setNormal:->
+        @_isStart = false
         @_speed = 0
+        @node.y = @_normaly if @_normaly
+
         @_speedType = sType.normal
-        @_state = sType.normal
         @_height = @node.height
+        @node.stopAllActions()
 
     move:()->
+        @_isStart = true
         @_speedType = sType.up
         @_height = @node.height
 
@@ -47,14 +52,14 @@ cc.Class {
 
     getState:->
         return @_speedType
-    getSpeed:->
-        return @speed
-    getuptime:->
-        return @_upTime
 
     update: (dt) ->
+        if(!@_isStart) then return
+
         @node.y -= @_speed  if (@node.y < @node.height * 0.5 and @_speedType is sType.up) or @_speedType is sType.down
-        DataModel.getModel().setShipState(sType.stop) if @node.y >= @node.height * 0.5
+        if @node.y >= @node.height * 0.5
+            DataModel.getModel().setShipState(sType.stop)
+
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
             @speedDown(dt) if @_speedType is sType.down

@@ -10,13 +10,20 @@ cc.Class {
     }
 
     onLoad:->
-        @_time = 0
-        @_upTime = 0
+        @_shipNormaly = @node.y
+        @setNormal()
+
+    setNormal:->
+        @node.y = @_shipNormaly if @_shipNormaly
+
         @_interval = 0
+        @_height = 0
         @_speed = 0
         @_shipSpeed = 0
         @_speedType = sType.normal
-        @_height = @node.height
+        @node.stopAllActions()
+
+    move:->
         @randConfig()
 
     randConfig:->
@@ -24,23 +31,20 @@ cc.Class {
         promise = DataModel.getModel().loadrobotConfig()
         promise = promise.then (_configs)=>
             _config = _configs[_rand]
-            @_height = @node.height
-            @_time = _config.interval
-            @move()
-
-    move:()->
-        @_speedType = sType.up
-        @_height = @node.height
+            @_speed = _config.speed
+            @_shipSpeed = @_speed
+            @_interval = _config.interval
+            @_continuedtime = _config.Continuedtime
+            @_speedType = sType.up
 
     speedUp:(dt)->
-        @_speed = -(@node.height * 0.01)
-        @_height += @_speed
-        if (@_height <= 5)
-            @_height =  @node.height
+        @_shipSpeed = -@_speed
+        @_continuedtime -= dt
+        if (@_continuedtime <= 0)
             @node.stopAllActions()
-            @node.runAction(cc.sequence(cc.delayTime(@_time),cc.callFunc(@randConfig,this)))
+            @node.runAction(cc.sequence(cc.delayTime(@_interval),cc.callFunc(@randConfig,this)))
+            @_height = @node.height
             @_speedType = sType.down
-            @_speed = -@speed
 
     speedDown:(dt)->
         @_speed = (@node.height * 0.005)
@@ -48,27 +52,24 @@ cc.Class {
         if (@_height <= -5)
             @_height = 0
             @_speedType = sType.normal
-            @_speed = @speed
+            @_speed = 0
 
-    setType:(@type)->
-
-    getState:->
-        return @_state
     getSpeed:->
-        return @speed
-    getuptime:->
-        return @_upTime
+        return @_shipSpeed
 
     update: (dt) ->
         _temp = 0
-        if DataModel.getModel().getShipState() is sType.stop
-            @_shipSpeed = DataModel.getModel().getShipSpeed()
-            _temp =  Math.abs(Math.abs(@_speed) - Math.abs(@_shipSpeed))
-        @_speed += if @_speedType is sType.up then -_temp else _temp
+        state = DataModel.getModel().getShipState() is sType.stop
 
-        @node.y -= @_speed if @_speedType is sType.up or @_speedType is sType.down
+        if state
+            _shipSpeed = DataModel.getModel().getShipSpeed()
+            _temp =  Math.abs(Math.abs(@_shipSpeed) - Math.abs(_shipSpeed))
+            cc.log("robotspeed:" + @_shipSpeed + " _shipSpeed:" + _shipSpeed + " _temp:" + _temp)
+
+        @_shipSpeed += if @_speedType is sType.up then -_temp else _temp
+
+        @node.y -= @_shipSpeed if @_speedType is sType.up or @_speedType is sType.down
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
-#            @speedDown(dt) if @_speedType is sType.down
-
+            @speedDown(dt) if @_speedType is sType.down
 }

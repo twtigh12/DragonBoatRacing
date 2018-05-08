@@ -1,32 +1,32 @@
 [
   {
     "lv":1,
-    "Continuedtime":0.03,
-    "interval":3,
-    "chance":50
+    "speed":1,
+    "Continuedtime":2,
+    "interval":2
   },
   {
     "lv":2,
+    "speed":2,
     "Continuedtime":3,
-    "interval":4,
-    "chance":30
+    "interval":3
   },
   {
     "lv":3,
-    "Continuedtime":0.04,
-    "interval":6,
-    "chance":20
+    "speed":2,
+    "Continuedtime":4,
+    "interval":2
   },
   {
     "lv":4,
-    "Continuedtime":0.05,
-    "interval":7,
-    "chance":15
+    "speed":3,
+    "Continuedtime":4,
+    "interval":3
   },
   {
     "lv":5,
-    "Continuedtime":0.06,
-    "interval":8,
-    "chance":10
+    "speed":4,
+    "Continuedtime":4,
+    "interval":3
   }
 ]
