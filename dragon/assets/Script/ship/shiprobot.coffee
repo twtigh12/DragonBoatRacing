@@ -5,7 +5,6 @@ cc.Class {
     extends: cc.Component
 
     properties: {
-        speed:1.5
         type:sType.Robot
     }
 
