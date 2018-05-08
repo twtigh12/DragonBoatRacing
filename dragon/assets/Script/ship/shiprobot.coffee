@@ -57,13 +57,12 @@ cc.Class {
         return @_shipSpeed
 
     update: (dt) ->
+        if(DataModel.getModel().isOver()) then return
         _temp = 0
         state = DataModel.getModel().getShipState() is sType.stop
-
         if state
             _shipSpeed = DataModel.getModel().getShipSpeed()
             _temp =  Math.abs(Math.abs(@_shipSpeed) - Math.abs(_shipSpeed))
-            cc.log("robotspeed:" + @_shipSpeed + " _shipSpeed:" + _shipSpeed + " _temp:" + _temp)
 
         @_shipSpeed += if @_speedType is sType.up then -_temp else _temp
 

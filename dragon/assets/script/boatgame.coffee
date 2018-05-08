@@ -49,6 +49,7 @@ cc.Class {
         if(@_ship.node.y >= height * 0.5)
             @_ship.node.y = height * 0.5
             @speed += @_shipspeed
+            cc.log("@_shipspeed :" + @_shipspeed + " @speed:" + @speed)
             @speed = 40 if(@speed > 40)
         @onChangeDrum()
 
@@ -62,6 +63,10 @@ cc.Class {
         maxy = -cc.winSize.height * 0.5 - @starSpr.node.height
         if( @starSpr.node.y >  maxy or @_isend)
             @starSpr.node.y -= @speed
+            if(@_ship.node.y >= @starSpr.node.y and @_isend and !@_isOver)
+                @mapship.y = (@map.height - @mapship.height - 10)
+                @_isOver = true
+                @showGameOver()
 
     setBgPos:->
         @bg1.node.y -= @speed
@@ -75,22 +80,18 @@ cc.Class {
         if (@_isOver) then return
         @_temp += Math.abs(@_ship.getShipSpeed())
         _scale =  @map.height / 2000
-        _temp = @_temp / 2000
         y = @_temp * _scale
         @mapship.y = y
         if(y >= @map.height - 100 and !@_isend)
             @starSpr.node.y = cc.winSize.height * 0.5 - @starSpr.node.height
             @_isend = true
 
-        if(y >= (@map.height - @mapship.height - 10) and !@_isOver)
-            @mapship.y = (@map.height - @mapship.height - 10)
-            @_isOver = true
-            @showGameOver()
-
     showGameOver:->
+        DataModel.getModel().setIsOver(true)
         UIControl.getInstance().showPrefab("overPanel","over")
 
     updateData:->
+        DataModel.getModel().setIsOver(false)
         @mapship.y = 0
         @_isOver = false
         @_ship.setNormal()
@@ -108,9 +109,12 @@ cc.Class {
         @timeLbl.node.runAction(cc.fadeIn(0.3))
         @showCountTime()
 
+
     update: (dt) ->
         if(@_isOver) then return
+
         if(DataModel.getModel().getShipState() isnt sType.stop and @_isStart)
+            cc.log("@speed:" + @speed)
             @speed += Math.abs(@_shipspeed * 0.2)
             @speed = 6 if(@speed > 6)
 

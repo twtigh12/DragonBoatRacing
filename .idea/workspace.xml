@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a1fd80a7-5a7c-4e34-a871-44f7e6376028" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/assets/Script/DataModel.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/DataModel.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/Script/ship/ship.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/ship/ship.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/Script/ship/shiprobot.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/Script/ship/shiprobot.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/config/robotShip.json" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/config/robotShip.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/resources/prefabs/boatgame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragon/assets/scene/New Scene.fire" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/scene/New Scene.fire" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +23,8 @@
       <file leaf-file-name="boatgame.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="37" column="101" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
+            <state relative-caret-position="105">
+              <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -61,8 +59,8 @@
       <file leaf-file-name="UIControl.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/common/UIControl.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="128" column="62" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="62" />
+            <state relative-caret-position="-379">
+              <caret line="122" column="14" lean-forward="true" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -70,26 +68,26 @@
       <file leaf-file-name="DataModel.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/DataModel.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="124">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ship.coffee" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ship.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/ship/ship.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="105">
+              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiprobot.coffee" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shiprobot.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dragon/assets/script/ship/shiprobot.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="135">
+              <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -116,36 +114,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@type</find>
-      <find>(@node.height * 0.005)</find>
-      <find>setShipSpeed</find>
-      <find>@_upTime</find>
-      <find>@_time</find>
-      <find>@_speed</find>
-      <find>]</find>
-      <find>@_state</find>
-      <find>showPrefab</find>
       <find>cc.loader.load</find>
       <find>@map</find>
       <find>mapship</find>
       <find>showprefab</find>
       <find>@mapship</find>
-      <find>showtop</find>
       <find>starSpr</find>
       <find>startSpr</find>
       <find>speed</find>
-      <find>@speed</find>
-      <find>@_isend</find>
       <find>onLoad</find>
       <find>@_height</find>
-      <find>setStretch</find>
       <find>setnormal</find>
       <find>@_normaly</find>
       <find>@_shipSpeed</find>
-      <find>@starSpr</find>
-      <find>@_isOver</find>
-      <find>@_speedType</find>
       <find>@_isStart</find>
+      <find>@_speedType</find>
+      <find>cc.log(</find>
+      <find>cc.log</find>
+      <find>cc,log</find>
+      <find>@_temp</find>
+      <find>_temp</find>
+      <find>@_speed</find>
+      <find>@starSpr</find>
+      <find>setStretch</find>
+      <find>@_isend</find>
+      <find>showtop</find>
+      <find>showPrefab</find>
+      <find>@_shipspeed</find>
+      <find>@_isOver</find>
+      <find>@speed</find>
+      <find>setShipState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,13 +168,13 @@
         <option value="$PROJECT_DIR$/dragon/assets/script/SDK/Adapter.coffee" />
         <option value="$PROJECT_DIR$/dragon/assets/script/mainpanel/mainPanel.coffee" />
         <option value="$PROJECT_DIR$/dragon/temp/quick-scripts/assets/script/ship/shiprobot.js" />
-        <option value="$PROJECT_DIR$/dragon/assets/script/DataModel.coffee" />
         <option value="$PROJECT_DIR$/dragon/assets/script/common/Tools.coffee" />
         <option value="$PROJECT_DIR$/dragon/assets/resources/config/robotShip.json" />
         <option value="$PROJECT_DIR$/dragon/assets/script/over/overPanel.coffee" />
-        <option value="$PROJECT_DIR$/dragon/assets/script/ship/ship.coffee" />
-        <option value="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" />
+        <option value="$PROJECT_DIR$/dragon/assets/script/DataModel.coffee" />
         <option value="$PROJECT_DIR$/dragon/assets/script/ship/shiprobot.coffee" />
+        <option value="$PROJECT_DIR$/dragon/assets/script/boatgame.coffee" />
+        <option value="$PROJECT_DIR$/dragon/assets/script/ship/ship.coffee" />
       </list>
     </option>
   </component>
@@ -305,12 +303,12 @@
       <workItem from="1525659374293" duration="928000" />
       <workItem from="1525704162519" duration="10631000" />
       <workItem from="1525753123981" duration="193000" />
-      <workItem from="1525788927351" duration="9821000" />
+      <workItem from="1525788927351" duration="12367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80964000" />
+    <option name="totallyTimeSpent" value="83510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -539,24 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dragon/assets/script/mainpanel/mainPanel.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dragon/assets/script/common/Tools.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dragon/assets/script/common/UIControl.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="128" column="62" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -574,31 +558,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dragon/assets/script/common/UIControl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-379">
+          <caret line="122" column="14" lean-forward="true" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dragon/assets/script/mainpanel/mainPanel.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dragon/assets/script/DataModel.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dragon/assets/script/ship/ship.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="37" column="101" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
+        <state relative-caret-position="124">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dragon/assets/script/ship/shiprobot.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="135">
+          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dragon/assets/script/boatgame.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dragon/assets/script/ship/ship.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>

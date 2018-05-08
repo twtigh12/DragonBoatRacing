@@ -23,11 +23,13 @@ cc.Class {
     move:()->
         @_isStart = true
         @_speedType = sType.up
+        @setShipState(sType.up)
         @_height = @node.height
 
     setType:(@type)->
 
     speedUp:(dt)->
+        @setShipState(sType.up)
         @_speed = -(@node.height * 0.01)
         @_height += @_speed
         if (@_height <= 5)
@@ -38,6 +40,7 @@ cc.Class {
         DataModel.getModel().setShipSpeed(@_speed)
 
     speedDown:(dt)->
+        @setShipState(sType.down)
         @_speed = (@node.height * 0.005)
         @_height -= @_speed
         if (@_height <= -5)
@@ -47,6 +50,11 @@ cc.Class {
             DataModel.getModel().setShipState(sType.normal)
         DataModel.getModel().setShipSpeed(@_speed)
 
+    setShipState:(type)->
+        state = type
+        state = sType.stop if @node.y >= @node.height * 0.5
+        DataModel.getModel().setShipState(state)
+
     getShipSpeed:->
         return @_speed
 
@@ -55,11 +63,7 @@ cc.Class {
 
     update: (dt) ->
         if(!@_isStart) then return
-
         @node.y -= @_speed  if (@node.y < @node.height * 0.5 and @_speedType is sType.up) or @_speedType is sType.down
-        if @node.y >= @node.height * 0.5
-            DataModel.getModel().setShipState(sType.stop)
-
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
             @speedDown(dt) if @_speedType is sType.down

@@ -2,9 +2,8 @@ Tools = require("Tools");
 
 DataModel  = cc.Class
   initData:->
-    cc.log("initData")
+
   onDestroy:->
-    cc.log("onDestroy")
 
   setShip:(@_ship)->
   getShip:->
@@ -19,6 +18,10 @@ DataModel  = cc.Class
   setShipState:(@_shipType)->
   getShipState:->
     return @_shipType
+
+  setIsOver:(@_isOver)->
+  isOver:->
+    return @_isOver
 
   getShipSpeed:->
     return @_shipSpeed ? 0
