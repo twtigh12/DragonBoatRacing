@@ -31,13 +31,14 @@ cc.Class {
         promise = promise.then (_configs)=>
             _config = _configs[_rand]
             @_speed = _config.speed
-            @_shipSpeed = @_speed
+            @_shipSpeed = -@_speed
             @_interval = _config.interval
             @_continuedtime = _config.Continuedtime
             @_speedType = sType.up
+            @_isStart = true
 
     speedUp:(dt)->
-        @_shipSpeed = -@_speed
+        @_shipSpeed =  -@_speed
         @_continuedtime -= dt
         if (@_continuedtime <= 0)
             @node.stopAllActions()
@@ -52,21 +53,21 @@ cc.Class {
             @_height = 0
             @_speedType = sType.normal
             @_speed = 0
+            @_isStart = false
 
     getSpeed:->
         return @_shipSpeed
 
     update: (dt) ->
-        if(DataModel.getModel().isOver()) then return
-        _temp = 0
+        if(DataModel.getModel().isOver() or !@_isStart) then return
+        _temp = @_shipSpeed
         state = DataModel.getModel().getShipState() is sType.stop
         if state
             _shipSpeed = DataModel.getModel().getShipSpeed()
             _temp =  Math.abs(Math.abs(@_shipSpeed) - Math.abs(_shipSpeed))
-
-        @_shipSpeed += if @_speedType is sType.up then _temp else -_temp
-
-        @node.y -= @_shipSpeed if @_speedType is sType.up or @_speedType is sType.down
+            _temp = -_temp if @_speedType is sType.up
+        if @_speedType is sType.up or @_speedType is sType.down
+            @node.y -= _temp
         if( @_speedType isnt sType.normal)
             @speedUp(dt) if @_speedType is sType.up
             @speedDown(dt) if @_speedType is sType.down

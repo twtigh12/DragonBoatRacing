@@ -46,10 +46,9 @@ cc.Class {
 
         @_isStart = true
         height = @_ship.node.height
+        @speed += @_shipspeed
         if(@_ship.node.y >= height * 0.5)
             @_ship.node.y = height * 0.5
-            @speed += @_shipspeed
-            cc.log("@_shipspeed :" + @_shipspeed + " @speed:" + @speed)
             @speed = 40 if(@speed > 40)
         @onChangeDrum()
 
@@ -78,7 +77,7 @@ cc.Class {
 
     setStretch:->
         if (@_isOver) then return
-        @_temp += Math.abs(@_ship.getShipSpeed())
+        @_temp = Math.abs(@_ship.getMoveDistances())
         _scale =  @map.height / 2000
         y = @_temp * _scale
         @mapship.y = y
@@ -113,10 +112,9 @@ cc.Class {
     update: (dt) ->
         if(@_isOver) then return
 
-        if(DataModel.getModel().getShipState() isnt sType.stop and @_isStart)
-            cc.log("@speed:" + @speed)
-            @speed += Math.abs(@_shipspeed * 0.2)
-            @speed = 6 if(@speed > 6)
+        if(DataModel.getModel().getShipState() is sType.down and @_isStart)
+            @speed = Math.abs(@_shipspeed)
+        @speed = 0 if(DataModel.getModel().getShipState() is sType.normal)
 
         @setStartSpr()
         @setBgPos()
