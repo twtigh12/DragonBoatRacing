@@ -2,7 +2,9 @@
   "appKey": "",
   "appSecret": "",
   "encryptJs": true,
-  "excludeScenes": [],
+  "excludeScenes": [
+    "ae17f212-49fe-4498-8bde-b63cc4ec73dd"
+  ],
   "fb-instant-games": {},
   "includeAnySDK": false,
   "includeSDKBox": false,
@@ -25,9 +27,9 @@
     "orientation": "portrait"
   },
   "renderMode": "0",
-  "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
+  "startScene": "9fc9f803-8790-4ab6-9a18-f819f7550124",
   "title": "hello_world",
-  "webOrientation": "auto",
+  "webOrientation": "portrait",
   "wechatgame": {
     "appid": "wx6ac3f5090a6b99c5",
     "orientation": "portrait"

@@ -1,6 +1,6 @@
 _DialogZOrder = 10004
-UIControl = require "dragon/assets/script/common/UIControl"
-DialogType = require "dragon/assets/script/common/DialogType"
+UIControl = require "UIControl"
+DialogType = require "DialogType"
 
 
 Dialog = cc.Class {

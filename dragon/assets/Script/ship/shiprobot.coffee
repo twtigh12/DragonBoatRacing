@@ -1,4 +1,4 @@
-sType = require "dragon/assets/script/ship/shipType"
+sType = require "shipType"
 DataModel = require "DataModel"
 Tools = require "Tools"
 cc.Class {

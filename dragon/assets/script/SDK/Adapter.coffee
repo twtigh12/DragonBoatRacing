@@ -1,7 +1,7 @@
 
 class Adapter
     @create: ->
-        window.LANG_TEXT = require("LANGTEXT_CN");
+#        window.LANG_TEXT = require("LANGTEXT_CN");
         promise = Promise.resolve()
         promise = promise.then =>
             new Adapter
@@ -51,7 +51,7 @@ class Adapter
 
 Adapter.setup = (type) ->
     getClass = (type) =>
-        return require "WeiXinApp" if type is 1
+#        return require "WeiXinApp" if type is 1
         return this
     promise = getClass(type).create()
     promise = promise.then (instance) =>

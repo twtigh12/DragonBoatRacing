@@ -1,0 +1,335 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "story",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 8.4,
+  "sample": 10,
+  "speed": 0.6,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "story-1": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 2,
+              "value": false
+            }
+          ]
+        }
+      },
+      "story-2": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 2.3,
+              "value": false
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.3,
+              "value": 255
+            },
+            {
+              "frame": 1.9,
+              "value": 255
+            },
+            {
+              "frame": 2.3,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "story-3": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 0.3,
+              "value": true
+            },
+            {
+              "frame": 3.2,
+              "value": false
+            }
+          ],
+          "x": [
+            {
+              "frame": 0.3,
+              "value": 882
+            },
+            {
+              "frame": 0.7,
+              "value": 32
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 2.7,
+              "value": 255
+            },
+            {
+              "frame": 3.3,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "story-4": {
+        "props": {
+          "x": [
+            {
+              "frame": 1.5,
+              "value": 898
+            },
+            {
+              "frame": 1.9,
+              "value": 0
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 1.5,
+              "value": true
+            },
+            {
+              "frame": 4.9,
+              "value": false
+            }
+          ]
+        }
+      },
+      "story-5": {
+        "props": {
+          "opacity": [
+            {
+              "frame": 2.6,
+              "value": 0
+            },
+            {
+              "frame": 3.2,
+              "value": 255
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 2.6,
+              "value": true
+            },
+            {
+              "frame": 4.8,
+              "value": false
+            }
+          ],
+          "x": [
+            {
+              "frame": 2.6,
+              "value": 693
+            },
+            {
+              "frame": 3.2,
+              "value": -330
+            }
+          ]
+        }
+      },
+      "story-6": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 3.3,
+              "value": true
+            },
+            {
+              "frame": 5.5,
+              "value": false
+            }
+          ],
+          "x": [
+            {
+              "frame": 3.3,
+              "value": 705
+            },
+            {
+              "frame": 3.7,
+              "value": 43
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 3.3,
+              "value": 0
+            },
+            {
+              "frame": 3.5,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "story-7": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 4.3,
+              "value": true
+            },
+            {
+              "frame": 8.1,
+              "value": false
+            }
+          ],
+          "x": [
+            {
+              "frame": 4.3,
+              "value": 977
+            },
+            {
+              "frame": 4.8,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "story-8": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 4.8,
+              "value": true
+            },
+            {
+              "frame": 7.8,
+              "value": false
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 4.8,
+              "value": 0
+            },
+            {
+              "frame": 5.2,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "story-9": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 5.2,
+              "value": true
+            },
+            {
+              "frame": 7.8,
+              "value": false
+            }
+          ],
+          "x": [
+            {
+              "frame": 5.2,
+              "value": -817
+            },
+            {
+              "frame": 5.6,
+              "value": -159
+            }
+          ]
+        }
+      },
+      "story-10": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 6.8,
+              "value": true
+            }
+          ],
+          "x": [
+            {
+              "frame": 6.8,
+              "value": 1101
+            },
+            {
+              "frame": 7.3,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "story-11": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": false
+            },
+            {
+              "frame": 7.8,
+              "value": true
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 7.8,
+              "value": 0
+            },
+            {
+              "frame": 8.4,
+              "value": 255
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

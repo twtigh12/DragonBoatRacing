@@ -9,19 +9,23 @@ cc.Class {
     }
 
     onLoad:->
-        window.lodash = require "lodash"
+        window.lodash = _ #require "lodash"
         DataModel.getModel().loadrobotConfig()
-
     onClickExplain:()->
 
     onClickRank:()->
 
     onClickStory:()->
+        promise = UIControl.getInstance().showPrefab("storyNode","boat")
+        promise.then =>
+            UIControl.getInstance().showTitleAndBack(true)
 
     onClickRice:()->
 
     onClickBoat:()->
-        UIControl.getInstance().showPrefab("boatgame","boat")
+        promise = UIControl.getInstance().showPrefab("boatgame","boat")
+        promise.then =>
+            UIControl.getInstance().showTitleAndBack(true)
     onClickDuck:()->
 
     onClickAnswer:()->

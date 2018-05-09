@@ -109,11 +109,11 @@
     "_parent": {
       "__id__": 2
     },
-    "_id": "33+GO9eRpHJ6MM7SzjJZER",
+    "_id": "3fRH6KSd1ES7XE650jS0ES",
     "_prefab": {
       "__id__": 4
     },
-    "_name": "overPanel",
+    "_name": "storyNode",
     "_active": true,
     "_position": {
       "__type__": "cc.Vec2",
@@ -131,9 +131,9 @@
       "__id__": 3
     },
     "asset": {
-      "__uuid__": "b0600591-fe47-48e6-a0fe-a2264d894c37"
+      "__uuid__": "e0f9cd54-a117-4b2d-8733-9dbfbe4b08aa"
     },
-    "fileId": "33+GO9eRpHJ6MM7SzjJZER",
+    "fileId": "3fRH6KSd1ES7XE650jS0ES",
     "sync": true
   },
   {

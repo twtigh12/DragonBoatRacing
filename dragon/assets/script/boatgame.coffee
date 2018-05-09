@@ -1,4 +1,4 @@
-sType = require "ship/shipType"
+sType = require "shipType"
 DataModel = require "DataModel"
 Tools = require "Tools"
 UIControl = require "UIControl"
